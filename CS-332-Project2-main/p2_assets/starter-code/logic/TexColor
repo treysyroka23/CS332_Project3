@@ -1,0 +1,17 @@
+function highlightText() {
+  const content = document.getElementById('content');
+  const text = content.innerHTML;
+
+  // Match hashtags and mentions and apply the font color attribute // this works
+  const textWithBlue = text.replace(/(#\w+|@\w+)/g, '<span style="color: blue;">$1</span>');
+  // Update the content with highlighted text
+  content.innerHTML = textWithBlue;
+
+  // Log the highlighted text to the console
+  console.log(content.innerText);
+}
+  // After generating the card, call highlightText for each card's content
+  const cardContent = card.querySelector(".card-text");
+  if (cardContent) {
+    highlightText(cardContent);
+  }

@@ -1,0 +1,10 @@
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+https://sentry.io/answers/how-can-i-add-a-key-value-pair-to-a-javascript-object/#:~:text=Using%20Property%20Accessors,value%20pair%20to%20an%20object
+https://stackoverflow.com/questions/73359274/syntaxerror-unexpected-token-doctype-is-not-valid-json
+https://stackoverflow.com/questions/62222954/add-directory-contents-to-the-array-as-an-object 
+https://www.w3schools.com/jsref/jsref_replace.asp
+https://stackoverflow.com/questions/68690519/how-to-get-all-the-values-inside-json-with-a-common-name
+https://www.semrush.com/blog/url-parameters/
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getDate
+https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_operator
