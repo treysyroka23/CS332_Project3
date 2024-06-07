@@ -1,0 +1,65 @@
+<!-- typical html starter with bootstrap links and a link to my own CSS file-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Slugfest </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="styleLogIn.css">
+</head>
+
+	<body>
+		<div class="container">
+			<h2 class="title"> SlugFest </h2>
+			<h2 class="text-center"> Please sign in</h2>
+			<div class="form-link"> 
+				<span>New? <a href="register.html" class="signup-link"> Create an account</a> </span>
+			</div>
+
+			<form>
+			<!-- I got the code for the form from the following Bootstrap link: https://getbootstrap.com/docs/4.3/components/forms/?#sizing
+			I made modifications since we didn't want labels on top of the password and email rows and other things -->
+				<div class="form-group">
+					<input type="email" class="form-control" id="InputEmail" aria-describedby="InputEmail" placeholder="Email address" required>
+					<small id="emailHelp" class="form-text text-muted"></small>
+				</div>
+				<div class="form-group" id="password">
+					<label for="InputPassword"></label>
+					<input type="password" class="form-control" id="InputPassword" aria-describedby="InputPassword" placeholder="Password" required>
+				</div>
+			<!-- I added this forgot password part because I always forget my passwords and thought I couldn't have my users just be locked out forever -->
+				<div class="form-link">
+					<a href="#" class="forgot-pass"> Forgot password?</a> 
+				</div>
+				<div class="form-group-form-check">
+					<input type="checkbox" class="form-check-input" id="RememberMeCheck" aria-describedby="RememberMe">Remember me</div> 
+				<div class="d-grid gap-2">
+					<button class="btn btn-primary" id="signin" type="submit">Sign in </button>
+				</div> 
+			<!-- <button type="submit" href="index.html" class="btn btn-primary">Sign in</button>--> 
+			</form>
+
+			<footer class="text-muted"> 
+				<p> 
+					&copy; 2021
+				</p>
+			</footer>
+		</div>
+
+		<p>
+			<a href="http://jigsaw.w3.org/css-validator/check/referer">
+				<img style="border:0;width:88px;height:31px"
+					src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+					alt="Valid CSS!" />
+				</a>
+		</p>
+			
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudfare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+	</body>
+</html>
