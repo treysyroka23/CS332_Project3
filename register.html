@@ -1,0 +1,159 @@
+<!-- typical html starter with bootstrap links and a link to my own CSS file --> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>SlugFest</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Add icon library for facebook, twitter, and google -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styleRegister.css">
+
+<!-- I copied some of the beginning of login.html and put them here since we wanted similar structure as the login page -->
+</head>
+
+  <body>
+    <div class="container">
+        <h2 class="title"> SlugFest </h2>
+        <h2 class="text-center"> Sign up with </h2>
+
+          <!-- I wanted to add a "Sign up with" part so I looked it up and the W3Schools social media icons guide really help: https://www.w3schools.com/howto/howto_css_social_media_buttons.asp --> 
+            
+        <a href="https://www.facebook.com" class="fa fa-facebook"></a>
+        <a href="https://twitter.com" class="fa fa-twitter"></a>
+        <a href="https://google.com" class="fa fa-google"></a>
+        <hr>
+        <h1 class="text"> Already have an account?
+            <a href="login.html" class="text"> Sign in</a> 
+        </h1>
+
+        <!-- I got the code for the form via bootstrap on this link: https://getbootstrap.com/docs/4.3/components/forms/?#sizing 
+        I don't know how to code very well in JS yet, but the part I used in this code from Bootstrap I familiarized myself with what it actually does before I put it here
+        Assessed on September 22, 2023 -->
+
+        <!-- this bootstrap link that explains grids also helped, especially with the CSS file: https://getbootstrap.com/docs/5.3/examples/grid/#containers 
+        asseessed: September 23, 2023-->
+
+        <!-- First row for the user to enter their first name, last name, and username -->
+      <form class="needs-validation" novalidate>
+        <div class="form-row" id="identityRow">
+          <div class="col-md-4 mb-3">
+            <input type="text" class="form-control" id="validationFirstName" placeholder="First name" required>
+            <div class="invalid-feedback">
+              Please enter your first name. 
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <input type="text" class="form-control" id="validationLastName" placeholder="Last name" required>
+            <div class="invalid-feedback">
+              Please enter your last name. 
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <input type="text" class="form-control" id="validationUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+            <div class="invalid-feedback">
+              Please choose a username.
+            </div>
+          </div>
+        </div>
+          <!-- second row for the user to enter their credentials, such as an email, a password, and confirm their password-->
+        <div class="form-row" id="logRow">
+          <div class="col-md-6 mb-3">
+            <div class="input-group">
+              <input type="email" class="form-control" id="validationEmail" placeholder="Email" aria-describedby="inputGroupPrepend" required>
+              <div class="invalid-feedback">
+                Please enter your email address. 
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="input-group">
+              <input type="password" class="form-control" id="validationPassword" placeholder="Password" aria-describedby="inputGroupPrepend" required>
+              <div class="invalid-feedback">
+                Please choose a valid password. Your password should be at least 8 characters long, with at least a capital letter, a number, and a special character. 
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3">
+            <div class="input-group">
+              <input type="password" class="form-control" id="validationConfirmPassword" placeholder="Confirm Password" aria-describedby="inputGroupPrepend" required>
+              <div class="invalid-feedback">
+                Your passwords do not match. Please try again. 
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- third row for the location of the user, this one is just optional so the registration doesn't feel too long -->
+        <div class="form-row" id="locationRow">
+          <div class="col-md-4 mb-3">
+            <input type="text" class="form-control" id="validationCity" placeholder="City">
+            <div class="invalid-feedback">
+              Please provide a valid city.
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <input type="text" class="form-control" id="validationCountry" placeholder="country" >
+            <div class="invalid-feedback">
+              Please provide a valid state.
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <input type="text" class="form-control" id="validationZip" placeholder="Zip">
+            <div class="invalid-feedback">
+              Please provide a valid zip.
+            </div>
+          </div>
+        </div>
+        <!-- terms and conditions -->
+        <div class="form-group">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>  Agree to terms and conditions. </input>
+            <div class="invalid-feedback">
+              You must agree before submitting.
+            </div>
+          </div>
+        </div>
+        <button class="btn btn-primary" type="submit">Register</button>
+      </form>
+    </div>
+
+    <script>
+
+      // FROM BOOTSTRAP: 
+
+      // Example starter JavaScript for disabling form submissions if there are invalid fields 
+
+      (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+    </script>
+
+    <p>
+      <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+          src="http://jigsaw.w3.org/css-validator/images/vcss-blue"
+          alt="Valid CSS!" />
+        </a>
+    </p>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudfare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
