@@ -1,0 +1,17 @@
+#left-edge {
+    border-radius: .5rem 0 0 .5rem;
+}
+
+#right-edge {
+    border-radius: 0 .5rem .5rem 0; 
+}
+
+/* Center the content horizontally and vertically */
+#icon {
+    vertical-align: -0.2em; /* Adjust the value as needed */
+}
+
+#icon2 {
+    vertical-align: -0.2em; /* Adjust the value as needed */
+}
+  
